@@ -35,8 +35,8 @@
     <profiles>
         <profile>
             <properties>
-                <repositoryName>ValidatorConstraints</repositoryName>
-                <repositoryOwner>HenrikAndWiktor</repositoryOwner>
+                <name>ValidatorConstraints</name>
+                <owner>HenrikAndWiktor</owner>
             </properties>
             <id>githubUploadJenkins</id>
             <activation>
