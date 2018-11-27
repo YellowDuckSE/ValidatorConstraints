@@ -6,9 +6,11 @@
 
     <groupId>se.wiktoreriksson</groupId>
     <artifactId>ValidatorConstraints</artifactId>
-    <version>pre1.0.0</version>
+    <version>pre1.1.0</version>
     <description>
         Constraints
+
+        Annotations: Regex,Email,Max,Min,Size
     </description>
     <properties>
         <repositoryName>ValidatorConstraints</repositoryName>
