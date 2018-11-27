@@ -72,10 +72,6 @@
                             </description>
                             <releaseName>${project.artifactId} ${project.version}</releaseName>
                             <tag>${project.version}</tag>
-
-                            <!-- If your project has additional artifacts, such as ones produced by
-                                 the maven-assembly-plugin, you can define the following
-                                 (requires version 1.1.1 of the plugin or higher): -->
                             <fileSets>
                                 <fileSet>
                                     <directory>${project.basedir}\target\</directory>
