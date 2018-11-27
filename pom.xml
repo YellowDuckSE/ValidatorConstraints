@@ -11,6 +11,8 @@
         Constraints
     </description>
     <properties>
+        <repositoryName>ValidatorConstraints</repositoryName>
+        <repositoryOwner>HenrikAndWiktor</repositoryOwner>
         <java.ee.version>8.0</java.ee.version>
         <java.se.version>1.8</java.se.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -32,12 +34,14 @@
         </dependency>
     </dependencies>
 
+    <scm>
+        <connection>scm:git:http://github.com/HenrikAndWiktor/ValidatorConstraints</connection>
+        <developerConnection>scm:git:http://github.com/HenrikAndWiktor/ValidatorConstraints</developerConnection>
+        <url>http://github.com/HenrikAndWiktor/ValidatorConstraints</url>
+    </scm>
+
     <profiles>
         <profile>
-            <properties>
-                <name>ValidatorConstraints</name>
-                <owner>HenrikAndWiktor</owner>
-            </properties>
             <id>githubUploadJenkins</id>
             <activation>
                 <property>
@@ -48,25 +52,26 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>com.github.github</groupId>
-                        <artifactId>downloads-maven-plugin</artifactId>
-                        <version>0.4</version>
+                        <groupId>de.jutzig</groupId>
+                        <artifactId>github-release-plugin</artifactId>
+                        <version>1.1.1</version>
                         <configuration>
-                            <description>${project.version} release of ${project.name}</description>
-                            <override>false</override>
-                            <includeAttached>true</includeAttached>
-                            <includes>
-                                <include>target/*.jar</include>
-                            </includes>
+                            <description>Release ${project.version} of this project</description>
+                            <releaseName>${project.artifactId} ${project.version}</releaseName>
+                            <tag>${project.version}</tag>
+
+                            <!-- If your project has additional artifacts, such as ones produced by
+                                 the maven-assembly-plugin, you can define the following
+                                 (requires version 1.1.1 of the plugin or higher): -->
+                            <fileSets>
+                                <fileSet>
+                                    <directory>${project.basedir}\target\</directory>
+                                    <includes>
+                                        <include>${project.artifactId}-${project.version}.jar</include>
+                                    </includes>
+                                </fileSet>
+                            </fileSets>
                         </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>upload</goal>
-                                </goals>
-                                <phase>package</phase>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>
