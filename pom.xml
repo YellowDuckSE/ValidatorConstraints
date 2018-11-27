@@ -6,7 +6,7 @@
 
     <groupId>se.wiktoreriksson</groupId>
     <artifactId>ValidatorConstraints</artifactId>
-    <version>Pre-release 1.0.0</version>
+    <version>pre1.0.0</version>
     <description>
         Constraints
     </description>
