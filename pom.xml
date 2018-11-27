@@ -6,7 +6,7 @@
 
     <groupId>se.wiktoreriksson</groupId>
     <artifactId>ValidatorConstraints</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>Pre-release 1.0.0</version>
     <description>
         Constraints
     </description>
@@ -55,8 +55,21 @@
                         <groupId>de.jutzig</groupId>
                         <artifactId>github-release-plugin</artifactId>
                         <version>1.1.1</version>
+                        <executions>
+                            <execution>
+                                <id>uploadPACKAGE</id>
+                                <goals>
+                                    <goal>release</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
                         <configuration>
-                            <description>Release ${project.version} of this project</description>
+                            <description>
+                                Release ${project.version} of this project
+
+                                ${project.description}
+                            </description>
                             <releaseName>${project.artifactId} ${project.version}</releaseName>
                             <tag>${project.version}</tag>
 
