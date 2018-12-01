@@ -1,6 +1,6 @@
 # ValidatorConstraints
 
-Classes: @Regex, @Email
+Classes: @Regex, @Email, @Size, @Min, @Max
 
 Package: se.wiktoreriksson.validation.constraints
 
