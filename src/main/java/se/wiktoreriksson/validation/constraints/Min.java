@@ -1,6 +1,6 @@
 package se.wiktoreriksson.validation.constraints;
 
-import se.wiktoreriksson.validation.ValidatorSMM;
+import se.wiktoreriksson.validation.ValidateMin;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -15,7 +15,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({FIELD,PARAMETER})
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = {ValidatorSMM.ValidateMin.class})
+@Constraint(validatedBy = {ValidateMin.class})
 public @interface Min {
     String message() default "Please match size";
 

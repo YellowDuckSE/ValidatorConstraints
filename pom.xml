@@ -6,11 +6,12 @@
 
     <groupId>se.wiktoreriksson</groupId>
     <artifactId>ValidatorConstraints</artifactId>
-    <version>pre1.1.0</version>
+    <version>pre1.1.1</version>
     <description>
         Constraints
 
         Annotations: Regex,Email,Max,Min,Size
+        Added tests for constraints
     </description>
     <properties>
         <repositoryName>ValidatorConstraints</repositoryName>
@@ -33,6 +34,17 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${org.hibernate.validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.1-b09</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
