@@ -63,6 +63,13 @@
                     <value>true</value>
                 </property>
             </activation>
+            <distributionManagement>
+                <repository>
+                    <id>yellowduck</id>
+                    <name>Yellow Duck Nexus MVN Repository</name>
+                    <url>http://wiktoreriksson.se:8081/repository/yellowduck/</url>
+                </repository>
+            </distributionManagement>
             <build>
                 <plugins>
                     <plugin>
