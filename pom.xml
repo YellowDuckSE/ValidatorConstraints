@@ -49,9 +49,9 @@
     </dependencies>
 
     <scm>
-        <connection>scm:git:http://github.com/HenrikAndWiktor/ValidatorConstraints</connection>
-        <developerConnection>scm:git:http://github.com/HenrikAndWiktor/ValidatorConstraints</developerConnection>
-        <url>http://github.com/HenrikAndWiktor/ValidatorConstraints</url>
+        <connection>scm:git:http://github.com/YellowDuckSE/ValidatorConstraints</connection>
+        <developerConnection>scm:git:http://github.com/YellowDuckSE/ValidatorConstraints</developerConnection>
+        <url>http://github.com/YellowDuckSE/ValidatorConstraints</url>
     </scm>
 
     <profiles>
